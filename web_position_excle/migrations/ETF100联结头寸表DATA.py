@@ -43,7 +43,7 @@ def get_data():
 
         'ETF100T1日活期存款倒算': 0,
         'ETF100T1日活期存款正算': 0,
-        'ETF100基金净值': 0,
+        'ETF100基金净值': 28807973.93,
         'ETF100活期存款保证': 6.01,
         'ETF100至少留活期存款': 0,
         'ETF100日日终活期存款估计': 0,
@@ -61,7 +61,7 @@ def get_data():
                                    data_dict['ETF100交易所回购到期'] + data_dict['ETF100银行间债券交易'] + data_dict[
                                        'ETF100银行间回购到期'] + \
                                    data_dict['ETF100T日申购款']
-    data_dict['ETF100至少留活期存款'] = data_dict['ETF100基金净值'] * data_dict['ETF100活期存款保证'] / 100
+    data_dict['ETF100至少留活期存款'] = data_dict['ETF100基金净值'] * data_dict['ETF100活期存款保证'] / Decimal('100')
 
     data_dict['ETF100日日终活期存款估计'] = data_dict['ETF100T1日活期存款正算']
 
