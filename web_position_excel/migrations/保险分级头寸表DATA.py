@@ -17,7 +17,7 @@ from decimal import Decimal
 
 
 def get_excel_df():
-    return pd.read_excel('web_position_excle/data/头寸表.xlsx', encoding='utf-8-sig')
+    return pd.read_excel('web_position_excel/data/头寸表.xlsx', encoding='utf-8-sig')
 
 
 def get_data():

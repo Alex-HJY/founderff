@@ -18,7 +18,7 @@ from django.urls import path
 
 from django.conf.urls import url
 
-from web_position_excle import views
+from web_position_excel import views
 
 urlpatterns = [
     path('', views.index),

@@ -15,10 +15,8 @@ from decimal import Decimal
 from dateutil import relativedelta
 
 
-
-
 def get_excel_df():
-    return pd.read_excel('web_position_excle/data/头寸表.xlsx', encoding='utf-8-sig')
+    return pd.read_excel('web_position_excel/data/头寸表.xlsx', encoding='utf-8-sig')
 
 
 def get_data():
@@ -71,6 +69,7 @@ def get_data():
         data_dict[k] = format(v, ',.02f')
 
     return data_dict
+
 
 if __name__ == '__main__':
     get_data()

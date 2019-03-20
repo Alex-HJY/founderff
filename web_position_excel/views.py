@@ -15,9 +15,9 @@ from dateutil import parser
 from datetime import datetime as dt
 from dateutil import relativedelta
 
-from web_position_excle.migrations import ETF100联结头寸表DATA
-from web_position_excle.migrations import 保险分级头寸表DATA
-from web_position_excle.migrations.update_excle import update_data
+from web_position_excel.migrations import ETF100联结头寸表DATA
+from web_position_excel.migrations import 保险分级头寸表DATA
+from web_position_excel.migrations.update_excle import update_data
 
 
 
