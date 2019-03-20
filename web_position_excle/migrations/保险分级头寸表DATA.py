@@ -16,8 +16,6 @@ from dateutil import relativedelta
 from decimal import Decimal
 
 
-
-
 def get_excel_df():
     return pd.read_excel('web_position_excle/data/头寸表.xlsx', encoding='utf-8-sig')
 
@@ -47,8 +45,9 @@ def get_data():
         '保险分级基金净值': 568685607.62,
         '保险分级活期存款保证': 6.01,
 
-
     }
+    for k, v in data_dict.items():
+        data_dict[k] = Decimal(str(v))
 
     data_dict['保险分级T日头寸'] = data_dict['保险分级银行存款'] + data_dict['保险分级证券清算款'] + \
                             data_dict['保险分级T日赎回款'] + data_dict['保险分级T1日赎回款'] + data_dict['保险分级TA预确认赎回数据'] + \
@@ -72,14 +71,14 @@ def get_data():
                                  data_dict['保险分级股票红利'] + data_dict['保险分级冻结保证金备付金'] + \
                                  + data_dict['保险分级银行间回购到期'] + data_dict['保险分级交易所回购到期'] + data_dict['保险分级T日申购款']
 
-    data_dict['保险分级至少留活期存款']=data_dict['保险分级基金净值']*data_dict['保险分级活期存款保证']/100
+    data_dict['保险分级至少留活期存款'] = data_dict['保险分级基金净值'] * data_dict['保险分级活期存款保证'] / Decimal('100')
 
-    data_dict['保险分级日日终活期存款估计']=data_dict['保险分级T1日活期存款正算']
+    data_dict['保险分级日日终活期存款估计'] = data_dict['保险分级T1日活期存款正算']
 
-    data_dict['保险分级需要卖出']=data_dict['保险分级至少留活期存款']-data_dict['保险分级日日终活期存款估计']
+    data_dict['保险分级需要卖出'] = data_dict['保险分级至少留活期存款'] - data_dict['保险分级日日终活期存款估计']
 
-
-
+    for k, v in data_dict.items():
+        data_dict[k] = format(v, ',.02f')
 
     return data_dict
 

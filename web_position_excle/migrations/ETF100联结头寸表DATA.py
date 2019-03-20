@@ -49,6 +49,9 @@ def get_data():
         'ETF100日日终活期存款估计': 0,
     }
 
+    for k, v in data_dict.items():
+        data_dict[k] = Decimal(str(v))
+
     data_dict['ETF100T日活期存款倒算'] = data_dict['ETF100T1日头寸'] - data_dict['ETF100T1日赎回款']
     data_dict['ETF100T日活期存款正算'] = data_dict['ETF100银行存款'] + data_dict['ETF100清算款'] + data_dict['ETF100T日赎回款'] + \
                                   data_dict['ETF100T日申购款']
@@ -63,6 +66,9 @@ def get_data():
     data_dict['ETF100日日终活期存款估计'] = data_dict['ETF100T1日活期存款正算']
 
     data_dict['ETF100需要卖出'] = data_dict['ETF100至少留活期存款'] - data_dict['ETF100日日终活期存款估计']
+
+    for k, v in data_dict.items():
+        data_dict[k] = format(v, ',.02f')
 
     return data_dict
 
