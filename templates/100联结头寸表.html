@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>100联结头寸表</title>
+</head>
+<body>
+
+<p>
+以下为100联结头寸表
+</p>
+
+<div>
+
+    <div style="width: 33%;float: left">
+        <table border="1">
+
+            <tr>
+                <th colspan="2">ETF100头寸表</th>
+            </tr>
+
+            <tr>
+                <td>日期：</td>
+                <td>{{ today }}</td>
+            </tr>
+
+            <tr>
+                <td>银行存款：</td>
+                <td>{{ ETF100银行存款 }}</td>
+            </tr>
+
+            <tr>
+                <td>清算款：</td>
+                <td>{{ETF100清算款}}</td>
+            </tr>
+            <tr>
+                <td>银行间回购交易：</td>
+                <td>{{ETF100银行间回购交易}}</td>
+            </tr>
+            <tr>
+                <td>交易间回购交易：</td>
+                <td>{{ETF100交易间回购交易}}</td>
+            </tr>
+            <tr>
+                <td>T日赎回款：</td>
+                <td>{{ETF100T日赎回款}}</td>
+            </tr>
+            <tr>
+                <td>T+1日赎回款：</td>
+                <td>{{ETF100T1日赎回款}}</td>
+            </tr>
+            <tr>
+                <td>债券付息：</td>
+                <td>{{ETF100债券付息}}</td>
+            </tr>
+            <tr>
+                <td>冻结保证金、备付金：</td>
+                <td>{{ETF100冻结保证金备付金}}</td>
+            </tr>
+            <tr>
+                <td>冻结管理费、托管费：</td>
+                <td>{{ETF100冻结管理费托管费}}</td>
+            </tr>
+            <tr>
+                <td>T日头寸：</td>
+                <td>{{ETF100T日头寸}}</td>
+            </tr>
+            <tr>
+                <td>交易所回购到期：</td>
+                <td>{{ETF100交易所回购到期}}</td>
+            </tr>
+            <tr>
+                <td>银行间债券交易：</td>
+                <td>{{ETF100银行间债券交易}}</td>
+            </tr>
+            <tr>
+                <td>银行间回购到期：</td>
+                <td>{{ETF100银行间回购到期}}</td>
+            </tr>
+            <tr>
+                <td>T日申购款：</td>
+                <td>{{ETF100T日申购款}}</td>
+            </tr>
+            <tr>
+                <td>T+1日头寸：</td>
+                <td>{{ETF100T1日头寸}}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table border="1">
+            <tr>
+                <td>{{ today }}</td>
+                <td>日终，涉及5%的</td>
+            </tr>
+            <tr>
+                <td>T日活期存款倒算</td>
+                <td>T日活期存款正算</td>
+            </tr>
+            <tr>
+                <td>{{ ETF100T日活期存款倒算 }}</td>
+                <td>{{ ETF100T日活期存款正算 }}</td>
+            </tr>
+            <tr>
+                <td>{{ today }}</td>
+                <td>日终，涉及5%的</td>
+            </tr>
+            <tr>
+                <td>T+1日活期存款倒算</td>
+                <td>T+1日活期存款正算</td>
+            </tr>
+            <tr>
+                <td>{{ ETF100T1日活期存款倒算 }}</td>
+                <td>{{ ETF100T1日活期存款正算 }}</td>
+            </tr>
+
+        </table>
+        <p>
+            <br>
+            <br>
+        </p>
+        <table border="1">
+               <tr>
+                <td>基金净值</td>
+                <td>{{ ETF100基金净值 }}</td>
+            </tr>
+            <tr>
+                <td>活期存款保证</td>
+                <td>{{ETF100活期存款保证  }}</td>
+            </tr>
+            <tr>
+                <td>至少留活期存款</td>
+                <td>{{ ETF100至少留活期存款 }}</td>
+            </tr>
+            <tr>
+                <td>{{ T1 }}日日终活期存款估计</td>
+                <td>{{  ETF100日日终活期存款估计}}</td>
+            </tr>
+            <tr>
+                <td>需要卖出(“+”为卖出）</td>
+                <td>{{ ETF100需要卖出 }}</td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
