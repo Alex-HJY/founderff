@@ -17,12 +17,12 @@ from dateutil import relativedelta
 
 from web_position_excel.migrations import ETF100联结头寸表DATA
 from web_position_excel.migrations import 保险分级头寸表DATA
-from web_position_excel.migrations.update_data_pickle import update_data
+from web_position_excel.migrations.update_data_pickle2 import update_data
 
 
 
 def index(request):
-    # dict1, dict2 = update_data()
+    dict1, dict2 = update_data()
     dict0 = {'today': dt.now().date().__str__(),
              'day': dt.now().day,
              'T1': (dt.now()+relativedelta.relativedelta(days=1)).day}

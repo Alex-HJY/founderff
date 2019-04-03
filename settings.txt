@@ -1,0 +1,7 @@
+email:huangjy@founderff.com
+password:Abc12345
+pop3_server:mail.founderff.com
+ETF头寸表邮件序号:5
+保险分级投头寸表（带TA数据）邮件序号:9
+ETF100基金净值:26222222
+保险分级基金净值:111141234
